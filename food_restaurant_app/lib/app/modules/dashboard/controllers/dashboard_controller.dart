@@ -55,6 +55,7 @@ class DashboardController extends GetxController with GetSingleTickerProviderSta
 
   @override
   void onInit() {
+
     tabController = TabController(length: 6, vsync: this);
     scrollController = ScrollController();
     super.onInit();

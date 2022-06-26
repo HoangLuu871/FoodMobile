@@ -1,4 +1,5 @@
 import 'package:ecommerce_flutter/app/modules/login/controllers/login_controller.dart';
+import 'package:ecommerce_flutter/app/modules/notification/controllers/notification_controllers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,6 +17,7 @@ class LoginView extends StatefulWidget {
 
 class _LoginViewState extends State<LoginView> {
   final LoginController controller = Get.put(LoginController());
+  NotificationController notiController = Get.put(NotificationController());
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -151,7 +153,9 @@ class _LoginViewState extends State<LoginView> {
                               if(errorMsg != "") {
                                 Get.defaultDialog(title: "Lỗi đăng nhập", middleText: errorMsg);
                               } else {
-                                Get.offAllNamed("/dashboard");
+                                if(await notiController.postFcmToken()) {
+                                  Get.offAllNamed("/dashboard");
+                                }
                               }
                             }
                           },
@@ -170,6 +174,11 @@ class _LoginViewState extends State<LoginView> {
                           ),
                         ),
                       ),
+                      TextButton(onPressed: () {
+                        notiController.showNotification();
+                      }, child: Text(
+                        "test"
+                      ))
                     ],
                   ),
                 ));

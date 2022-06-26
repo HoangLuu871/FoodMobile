@@ -10,6 +10,7 @@ class LoginController extends GetxController with StateMixin {
   var isLoginProcessing = false.obs;
   String errorMsg = "";
 
+
   Future<String> authLogin({String? username, String? password}) async {
     errorMsg = "";
     try {

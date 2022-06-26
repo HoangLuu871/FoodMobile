@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "822827556703",
+    "project_id": "mobile-shoppeefood",
+    "storage_bucket": "mobile-shoppeefood.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822827556703:android:4de2bcd418f1322489a0ea",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822827556703-s48asuuq7d8httg7l81oapfk8rvrapfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxI542ESa_IRH9T14-7z9TSoClFlIoOWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822827556703-s48asuuq7d8httg7l81oapfk8rvrapfn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

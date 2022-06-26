@@ -146,7 +146,7 @@ class OrderList extends GetView<DashboardController> {
                             ),
                             color: Colors.white),
                         margin:
-                            EdgeInsets.only(bottom: Dimensions.getProportionateScreenHeight(10)),
+                        EdgeInsets.only(bottom: Dimensions.getProportionateScreenHeight(10)),
                         child: InkWell(
                           onTap: () => {
                             Get.to(() => const OrderDetailView(),
@@ -175,7 +175,7 @@ class OrderList extends GetView<DashboardController> {
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize:
-                                                        Dimensions.getProportionateScreenHeight(20),
+                                                    Dimensions.getProportionateScreenHeight(20),
                                                     fontWeight: FontWeight.w700,
                                                   ),
                                                 ),
@@ -189,7 +189,7 @@ class OrderList extends GetView<DashboardController> {
                                             style: TextStyle(
                                                 color: AppColors.mainColor,
                                                 fontSize:
-                                                    Dimensions.getProportionateScreenHeight(18),
+                                                Dimensions.getProportionateScreenHeight(18),
                                                 fontWeight: FontWeight.w700),
                                           ),
                                         ],
@@ -281,9 +281,9 @@ class OrderList extends GetView<DashboardController> {
                                     ),
                                     Text(
                                       NumberFormat("#,##0", "en_US").format(controller
-                                              .orderRes.value.rows!
-                                              .elementAt(index)
-                                              .subTotal) +
+                                          .orderRes.value.rows!
+                                          .elementAt(index)
+                                          .subTotal) +
                                           "đ",
                                       style: TextStyle(
                                           color: const Color(0xFF8B8B8B),
