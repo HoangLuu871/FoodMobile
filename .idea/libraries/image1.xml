@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="image1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/icon-logo.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/app-logo.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/food4.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/order_completed.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/voucher_thumb.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/food3.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/order_preparing.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/order_delivering.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/order_cancelled.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/food1.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/order_waiting.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/food2.jpg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/text-icon-logo.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

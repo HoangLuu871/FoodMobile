@@ -1,5 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ecommerce_flutter">
+    package="com.example.ecommerce_flutter"
+    android:installLocation="auto"
+    android:versionCode="3210" android:versionName="1.1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-sdk android:minSdkVersion="6" android:targetSdkVersion="10"/>
    <application
         android:label="Eat Shipper"
         android:name="${applicationName}"

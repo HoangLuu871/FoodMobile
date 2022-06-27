@@ -1,12 +1,15 @@
 import 'package:ecommerce_flutter/app/modules/login/controllers/login_controller.dart';
 import 'package:ecommerce_flutter/app/modules/notification/controllers/notification_controllers.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 
 import '../../../../utils/colors.dart';
 import '../../../../utils/dimensions.dart';
 import '../../../../utils/icons.dart';
+import '../../../main.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -19,6 +22,7 @@ class _LoginViewState extends State<LoginView> {
   final LoginController controller = Get.put(LoginController());
   NotificationController notiController = Get.put(NotificationController());
   final _formKey = GlobalKey<FormState>();
+
 
   @override
   Widget build(BuildContext context) {
@@ -153,9 +157,8 @@ class _LoginViewState extends State<LoginView> {
                               if(errorMsg != "") {
                                 Get.defaultDialog(title: "Lỗi đăng nhập", middleText: errorMsg);
                               } else {
-                                if(await notiController.postFcmToken()) {
-                                  Get.offAllNamed("/dashboard");
-                                }
+                                await notiController.postFcmToken();
+                                Get.offAllNamed("/dashboard");
                               }
                             }
                           },
@@ -174,11 +177,6 @@ class _LoginViewState extends State<LoginView> {
                           ),
                         ),
                       ),
-                      TextButton(onPressed: () {
-                        notiController.showNotification();
-                      }, child: Text(
-                        "test"
-                      ))
                     ],
                   ),
                 ));

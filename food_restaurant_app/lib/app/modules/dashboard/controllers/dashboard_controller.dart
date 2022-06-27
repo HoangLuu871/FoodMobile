@@ -1,7 +1,9 @@
 import 'package:ecommerce_flutter/app/modules/dashboard/apihandler/dashboard_api.dart';
 import 'package:ecommerce_flutter/app/modules/dashboard/models/dashboard_model.dart';
+import 'package:ecommerce_flutter/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DashboardController extends GetxController with GetSingleTickerProviderStateMixin {
   var orderRes = DashboardModel().obs;
@@ -18,8 +20,12 @@ class DashboardController extends GetxController with GetSingleTickerProviderSta
         orderRes.value = DashboardModel.fromJson(dataRes);
       }
     } catch (exception) {
+      final prefs = await SharedPreferences.getInstance();
+      prefs.remove('accessToken');
+      prefs.remove('refreshToken');
       isDataProcessing(false);
       print(exception);
+      Get.offNamed("/login");
     } finally {
       isDataProcessing(false);
     }
@@ -56,22 +62,20 @@ class DashboardController extends GetxController with GetSingleTickerProviderSta
   @override
   void onInit() {
 
-    tabController = TabController(length: 6, vsync: this);
+    tabController = TabController(length: 5, vsync: this);
     scrollController = ScrollController();
     super.onInit();
     getAllOrder();
     tabController.addListener(() {
       if(tabController.index == 0){
         getAllOrder();
-      }else if(tabController.index == 1) {
-        getOrderByStatus("Pending");
+      } else if (tabController.index == 1) {
+        getOrderByStatus("Preparing");
       } else if (tabController.index == 2) {
-        getOrderByStatus2("Confirmed", "Preparing");
-      } else if (tabController.index == 3) {
         getOrderByStatus("Delivering");
-      } else if (tabController.index == 4) {
+      } else if (tabController.index == 3) {
         getOrderByStatus2("Completed", "Reviewed");
-      } else if (tabController.index == 5) {
+      } else if (tabController.index == 4) {
         getOrderByStatus("Cancelled");
       }
     });
@@ -80,15 +84,13 @@ class DashboardController extends GetxController with GetSingleTickerProviderSta
   Future refreshData() async {
     if(tabController.index == 0){
       getAllOrder();
-    }else if(tabController.index == 1) {
-      getOrderByStatus("Pending");
+    }else if (tabController.index == 1) {
+      getOrderByStatus("Preparing");
     } else if (tabController.index == 2) {
-      getOrderByStatus2("Preparing", "Confirmed");
-    } else if (tabController.index == 3) {
       getOrderByStatus("Delivering");
-    } else if (tabController.index == 4) {
+    } else if (tabController.index == 3) {
       getOrderByStatus2("Completed", "Reviewed");
-    } else if (tabController.index == 5) {
+    } else if (tabController.index == 4) {
       getOrderByStatus("Cancelled");
     }
   }

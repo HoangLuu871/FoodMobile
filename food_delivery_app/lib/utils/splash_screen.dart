@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../app/modules/orderdetail/views/orderdetail_view.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -32,13 +34,18 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void navigateToRoute() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    String? accessToken = prefs.getString("accessToken");
-    // if (accessToken != null) {
-    //   Get.offAllNamed("/dashboard");
-    // } else {
-    //   Get.offAllNamed("/login");
-    // }
-    Get.offAllNamed("/dashboard");
+    String? accessToken = prefs.getString("accessToken_ship");
+    String? haveOrder = prefs.getString("haveOrder_ship");
+    if (accessToken != null) {
+      if(haveOrder != null) {
+        Get.offAll(() => const OrderDetailView(),
+            arguments: int.parse(haveOrder));
+      } else {
+        Get.offAllNamed("/dashboard");
+      }
+    } else {
+      Get.offAllNamed("/login");
+    }
   }
 
   @override

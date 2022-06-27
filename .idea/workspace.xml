@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="597b6554-8c52-4b61-bb2d-d10cc570f60b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/CupertinoIcons_ttf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/CupertinoIcons_ttf1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MaterialIcons_Regular_otf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MaterialIcons_Regular_otf1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Nunito.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Nunito1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/TZDB_dat.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/TZDB_dat1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes28.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes32.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes33.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes34.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes35.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/classes9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flutter_assets.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flutter_assets1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fonts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fonts1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/icongg_png.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/icongg_png1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/image.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/image1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/out9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/res.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/notification/apihandler/fcm_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/notification/controllers/notification_controllers.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/apihandler/order_detail_api.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/models/order_detail_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/controllers/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/controllers/dashboard_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/models/dashboard_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/models/dashboard_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/views/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/dashboard/views/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/login/apihandler/login_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/login/apihandler/login_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/login/views/login_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/login/views/login_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/controllers/orderdetail_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/controllers/orderdetail_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/views/orderdetail_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/app/modules/orderdetail/views/orderdetail_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/lib/utils/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/lib/utils/splash_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_delivery_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/food_delivery_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/apihandler/dashboard_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/apihandler/dashboard_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/controllers/dashboard_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/controllers/dashboard_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/models/dashboard_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/models/dashboard_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/models/order_detail_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/models/order_detail_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/views/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/views/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/views/order_detail_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/dashboard/views/order_detail_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/login/views/login_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/login/views/login_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menu_add_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menu_add_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menu_update_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menu_update_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menumanager_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/menumanager/views/menumanager_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/notification/apihandler/fcm_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/notification/apihandler/fcm_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/notification/controllers/notification_controllers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/notification/controllers/notification_controllers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/models/resmanager_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/models/resmanager_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_add_voucher_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_add_voucher_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_update_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_update_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_voucher_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/res_voucher_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/resmanger_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/app/modules/resmanager/views/resmanger_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_restaurant_app/lib/utils/splash_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/food_restaurant_app/lib/utils/splash_screen.dart" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2B9VNPmZFUkmse7wcw2FXeUc2nD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/food-app-247-main" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="597b6554-8c52-4b61-bb2d-d10cc570f60b" name="Default Changelist" comment="" />
+      <created>1656318253207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656318253207</updated>
+    </task>
+    <servers />
+  </component>
+</project>

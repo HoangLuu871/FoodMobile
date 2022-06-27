@@ -18,8 +18,8 @@ class LoginController extends GetxController with StateMixin {
       print(loginRes);
       if (loginRes[0] != "") {
         final prefs = await SharedPreferences.getInstance();
-        prefs.setString("accessToken", loginRes[0]);
-        prefs.setString("refreshToken", loginRes[1]);
+        prefs.setString("accessToken_ship", loginRes[0]);
+        prefs.setString("refreshToken_ship", loginRes[1]);
       } else {
         if (loginRes[1] == "Invalid password") {
           errorMsg = "Nhập sai mật khẩu";
@@ -37,7 +37,7 @@ class LoginController extends GetxController with StateMixin {
 
   Future<bool> refreshToken() async {
     final prefs = await SharedPreferences.getInstance();
-    String? token = prefs.getString("refreshToken");
+    String? token = prefs.getString("refreshToken_ship");
     if (token == null || token == "") {
       return false;
     }
@@ -47,8 +47,8 @@ class LoginController extends GetxController with StateMixin {
       List refreshRes = await LoginApi.refreshToken(refreshToken: token);
       if (refreshRes[0] != "") {
         final prefs = await SharedPreferences.getInstance();
-        prefs.setString("accesstoken", refreshRes[0]);
-        prefs.setString("refreshToken", refreshRes[1]);
+        prefs.setString("accesstoken_ship", refreshRes[0]);
+        prefs.setString("refreshToken_ship", refreshRes[1]);
         success = true;
       }
     } finally {
@@ -59,11 +59,11 @@ class LoginController extends GetxController with StateMixin {
 
   Future<bool> authLogout() async {
     final prefs = await SharedPreferences.getInstance();
-    String? token = prefs.getString("refreshToken");
+    String? token = prefs.getString("refreshToken_ship");
     bool logoutRes = await LoginApi.authLogout(refreshToken: token);
     if(logoutRes) {
-      prefs.remove('accessToken');
-      prefs.remove('refreshToken');
+      prefs.remove('accessToken_ship');
+      prefs.remove('refreshToken_ship');
     }
     return logoutRes;
   }

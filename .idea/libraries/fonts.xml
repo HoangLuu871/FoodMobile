@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="fonts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Poppins-Regular.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Roboto-Bold.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Roboto-Medium.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Poppins-SemiBold.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Poppins-Bold.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Roboto-Black.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Metropolis-Bold.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Metropolis-Light.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Metropolis-Regular.otf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Roboto-Regular.ttf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

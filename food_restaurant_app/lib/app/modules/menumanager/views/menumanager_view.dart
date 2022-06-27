@@ -5,12 +5,15 @@ import 'package:ecommerce_flutter/utils/colors.dart';
 import 'package:ecommerce_flutter/utils/drawer_navigation.dart';
 import 'package:ecommerce_flutter/utils/icons.dart';
 import 'package:ecommerce_flutter/utils/refresh_widget.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../utils/dimensions.dart';
+import '../../../main.dart';
 
 class MenuManagerView extends StatefulWidget {
   const MenuManagerView({Key? key}) : super(key: key);
@@ -22,6 +25,7 @@ class MenuManagerView extends StatefulWidget {
 class _MenuManagerViewState extends State<MenuManagerView> {
   MenuManagerController controller = Get.put(MenuManagerController());
   final keyRefresh = GlobalKey<RefreshIndicatorState>();
+
 
   @override
   Widget build(BuildContext context) {

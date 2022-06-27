@@ -92,7 +92,6 @@ class Food {
     this.price,
     this.prepareTime,
     this.imageLink,
-    this.createdAt,
     this.updatedAt,
   });
 
@@ -102,7 +101,6 @@ class Food {
   dynamic price;
   dynamic prepareTime;
   String? imageLink;
-  DateTime? createdAt;
   DateTime? updatedAt;
 
   factory Food.fromJson(Map<String, dynamic> json) => Food(
@@ -112,7 +110,6 @@ class Food {
     price: json["price"],
     prepareTime: json["prepareTime"],
     imageLink: json["imageLink"],
-    createdAt: DateTime.parse(json["createdAt"]),
     updatedAt: DateTime.parse(json["updatedAt"]),
   );
 
@@ -123,7 +120,6 @@ class Food {
     "price": price,
     "prepareTime": prepareTime,
     "imageLink": imageLink,
-    "createdAt": createdAt!.toIso8601String(),
     "updatedAt": updatedAt!.toIso8601String(),
   };
 }
@@ -132,45 +128,24 @@ class User {
   User({
     this.id,
     this.name,
-    this.username,
-    this.password,
     this.phoneNumber,
     this.email,
-    this.gender,
-    this.birthday,
-    this.job,
-    this.address,
-    this.currentAddress,
     this.createdAt,
     this.updatedAt,
   });
 
   int? id;
   String? name;
-  String? username;
-  String? password;
   String? phoneNumber;
   String? email;
-  dynamic gender;
-  dynamic birthday;
-  dynamic job;
-  Address? address;
-  CurrentAddress? currentAddress;
   DateTime? createdAt;
   DateTime? updatedAt;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
     id: json["id"],
     name: json["name"],
-    username: json["username"],
-    password: json["password"],
     phoneNumber: json["phoneNumber"],
     email: json["email"],
-    gender: json["gender"],
-    birthday: json["birthday"],
-    job: json["job"],
-    address: Address.fromJson(json["address"]),
-    currentAddress: CurrentAddress.fromJson(json["currentAddress"]),
     createdAt: DateTime.parse(json["createdAt"]),
     updatedAt: DateTime.parse(json["updatedAt"]),
   );
@@ -178,56 +153,10 @@ class User {
   Map<String, dynamic> toJson() => {
     "id": id,
     "name": name,
-    "username": username,
-    "password": password,
     "phoneNumber": phoneNumber,
     "email": email,
-    "gender": gender,
-    "birthday": birthday,
-    "job": job,
-    "address": address!.toJson(),
-    "currentAddress": currentAddress!.toJson(),
     "createdAt": createdAt!.toIso8601String(),
     "updatedAt": updatedAt!.toIso8601String(),
   };
 }
 
-class Address {
-  Address({
-    this.currentAddress,
-  });
-
-  CurrentAddress? currentAddress;
-
-  factory Address.fromJson(Map<String, dynamic> json) => Address(
-    currentAddress: CurrentAddress.fromJson(json["currentAddress"]),
-  );
-
-  Map<String, dynamic> toJson() => {
-    "currentAddress": currentAddress!.toJson(),
-  };
-}
-
-class CurrentAddress {
-  CurrentAddress({
-    this.address,
-    this.latitude,
-    this.longitude,
-  });
-
-  String? address;
-  dynamic latitude;
-  dynamic longitude;
-
-  factory CurrentAddress.fromJson(Map<String, dynamic> json) => CurrentAddress(
-    address: json["address"],
-    latitude: json["latitude"].toDouble(),
-    longitude: json["longitude"].toDouble(),
-  );
-
-  Map<String, dynamic> toJson() => {
-    "address": address,
-    "latitude": latitude,
-    "longitude": longitude,
-  };
-}

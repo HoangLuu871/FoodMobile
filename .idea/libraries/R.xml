@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="R">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/firebase_messaging/intermediates/compile_r_class_jar/debug/R.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

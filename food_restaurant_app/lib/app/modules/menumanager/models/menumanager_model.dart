@@ -10,7 +10,7 @@ class MenuManagerModel {
     this.rows,
   });
 
-  int? count;
+  dynamic count;
   List<Row>? rows;
 
   factory MenuManagerModel.fromJson(Map<String, dynamic> json) => MenuManagerModel(
@@ -32,7 +32,6 @@ class Row {
     this.price,
     this.prepareTime,
     this.imageLink,
-    this.createdAt,
     this.updatedAt,
   });
 
@@ -42,7 +41,6 @@ class Row {
   int? price;
   int? prepareTime;
   String? imageLink;
-  DateTime? createdAt;
   DateTime? updatedAt;
 
   factory Row.fromJson(Map<String, dynamic> json) => Row(
@@ -52,7 +50,6 @@ class Row {
     price: json["price"],
     prepareTime: json["prepareTime"],
     imageLink: json["imageLink"],
-    createdAt: DateTime.parse(json["createdAt"]),
     updatedAt: DateTime.parse(json["updatedAt"]),
   );
 
@@ -63,7 +60,6 @@ class Row {
     "price": price,
     "prepareTime": prepareTime,
     "imageLink": imageLink,
-    "createdAt": createdAt?.toIso8601String(),
     "updatedAt": updatedAt?.toIso8601String(),
   };
 }

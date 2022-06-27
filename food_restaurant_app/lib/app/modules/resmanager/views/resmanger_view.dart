@@ -3,13 +3,16 @@ import 'package:ecommerce_flutter/app/modules/resmanager/controllers/resmanager_
 import 'package:ecommerce_flutter/app/modules/resmanager/views/res_update_view.dart';
 import 'package:ecommerce_flutter/app/modules/resmanager/views/res_voucher_view.dart';
 import 'package:ecommerce_flutter/utils/star_rating.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 
 import '../../../../utils/colors.dart';
 import '../../../../utils/dimensions.dart';
 import '../../../../utils/drawer_navigation.dart';
 import '../../../../utils/icons.dart';
+import '../../../main.dart';
 
 class ResManagerView extends StatefulWidget {
   const ResManagerView({Key? key}) : super(key: key);

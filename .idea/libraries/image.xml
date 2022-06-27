@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="image">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/text-icon-logo.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/icon-logo-second.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/app-logo.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/icon-logo.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_delivery_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/image/text-icon-logo-second.png.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

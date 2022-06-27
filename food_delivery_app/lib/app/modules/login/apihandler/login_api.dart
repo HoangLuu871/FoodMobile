@@ -9,7 +9,7 @@ class LoginApi {
   static const baseURL = "https://shopee-food-mobile.herokuapp.com";
 
   static Future<List> authLogin({String? username, String? password}) async {
-    var response = await client.post(Uri.parse("$baseURL/auth/login"),
+    var response = await client.post(Uri.parse("$baseURL/auth/login/shipper"),
         headers: <String, String>{
           "Content-Type": "application/json; charset=UTF-8",
         },
@@ -67,6 +67,7 @@ class LoginApi {
           "Content-Type": "application/json; charset=UTF-8",
         },
         body: jsonEncode({"refreshtoken": refreshToken}));
+    //print(response.body);
     if (response.statusCode == 204) {
       return true;
     } else {

@@ -17,6 +17,7 @@ class FcmApi {
         body: jsonEncode({
           "token": fcmToken ?? '',
         }));
+    print(response.body);
     if (response.statusCode == 200) {
       return true;
     } else {

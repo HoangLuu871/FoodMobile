@@ -4,10 +4,15 @@ import 'package:ecommerce_flutter/utils/colors.dart';
 import 'package:ecommerce_flutter/utils/dimensions.dart';
 import 'package:ecommerce_flutter/utils/drawer_navigation.dart';
 import 'package:ecommerce_flutter/utils/refresh_widget.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:tab_indicator_styler/tab_indicator_styler.dart';
+
+import '../../../main.dart';
+import '../../notification/controllers/notification_controllers.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -18,6 +23,51 @@ class DashboardView extends StatefulWidget {
 
 class _DashboardViewState extends State<DashboardView> {
   DashboardController controller = Get.put(DashboardController());
+  @override
+  void initState() {
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      print('A new Message event was published!');
+      RemoteNotification notification = message.notification!;
+      AndroidNotification androidNotification = message.notification!.android!;
+      if (notification != null && androidNotification != null) {
+        showDialog(
+            context: context,
+            builder: (_) {
+              return AlertDialog(
+                title: Text(notification.title!),
+                content: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [Text(notification.body!)],
+                  ),
+                ),
+              );
+            });
+      }
+    });
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print('A new Message event was published!');
+      print(message.data);
+      RemoteNotification notification = message.notification!;
+      AndroidNotification androidNotification = message.notification!.android!;
+      if (notification != null && androidNotification != null) {
+        flutterLocalNotificationsPlugin.show(
+            notification.hashCode,
+            notification.title,
+            notification.body,
+            NotificationDetails(
+                android: AndroidNotificationDetails(
+                  channel.id,
+                  channel.name,
+                  color: Colors.blue,
+                  playSound: true,
+                  icon: '@mipmap/ic_launcher',
+                )));
+      }
+    });
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,29 +81,32 @@ class _DashboardViewState extends State<DashboardView> {
                 SliverAppBar(
                   iconTheme: const IconThemeData(color: Color(0xFFbc2c3d)),
                   backgroundColor: Colors.white,
-                  title: Container(
-                    alignment: Alignment.center,
-                    height: Dimensions.getProportionateScreenHeight(36),
-                    width: Dimensions.getProportionateScreenWidth(280),
-                    child: TextField(
-                      cursorColor: AppColors.mainColor,
-                      decoration: InputDecoration(
-                        prefixIcon: const Icon(
-                          Icons.search,
-                          color: Color(0xFFB2B2B2),
+                  title: Row(children: [
+                    Container(
+                      alignment: Alignment.center,
+                      height: Dimensions.getProportionateScreenHeight(36),
+                      width: Dimensions.getProportionateScreenWidth(280),
+                      child: TextField(
+                        cursorColor: AppColors.mainColor,
+                        decoration: InputDecoration(
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            color: Color(0xFFB2B2B2),
+                          ),
+                          hintText: "Tìm kiếm đơn hàng theo ID",
+                          border: InputBorder.none,
+                          contentPadding:
+                              EdgeInsets.all(Dimensions.getProportionateScreenHeight(1)),
+                          hintStyle: TextStyle(
+                              fontFamily: 'Nunito',
+                              fontSize: Dimensions.getProportionateScreenHeight(17),
+                              fontWeight: FontWeight.w400,
+                              color: const Color(0xFFB2B2B2)),
                         ),
-                        hintText: "Tìm kiếm đơn hàng theo ID",
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.all(Dimensions.getProportionateScreenHeight(1)),
-                        hintStyle: TextStyle(
-                            fontFamily: 'Nunito',
-                            fontSize: Dimensions.getProportionateScreenHeight(17),
-                            fontWeight: FontWeight.w400,
-                            color: const Color(0xFFB2B2B2)),
                       ),
+                      decoration: const BoxDecoration(color: Color(0xFFF4F4F4)),
                     ),
-                    decoration: const BoxDecoration(color: Color(0xFFF4F4F4)),
-                  ),
+                  ]),
                   pinned: true,
                   floating: false,
                   forceElevated: isScrolled,
@@ -76,7 +129,6 @@ class _DashboardViewState extends State<DashboardView> {
                     tabs: const [
                       Tab(text: "Tất cả"),
                       Tab(text: "Đơn mới"),
-                      Tab(text: "Xác nhận"),
                       Tab(text: "Vận chuyển"),
                       Tab(text: "Lịch sử"),
                       Tab(text: "Đã hủy"),
@@ -92,7 +144,6 @@ class _DashboardViewState extends State<DashboardView> {
                 OrderList(),
                 OrderList(),
                 OrderList(),
-                OrderList(),
               ],
               controller: controller.tabController,
             )));
@@ -102,6 +153,7 @@ class _DashboardViewState extends State<DashboardView> {
 class OrderList extends GetView<DashboardController> {
   OrderList({Key? key}) : super(key: key);
   final keyRefresh = GlobalKey<RefreshIndicatorState>();
+  final NotificationController notificationController = Get.put(NotificationController());
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +198,7 @@ class OrderList extends GetView<DashboardController> {
                             ),
                             color: Colors.white),
                         margin:
-                        EdgeInsets.only(bottom: Dimensions.getProportionateScreenHeight(10)),
+                            EdgeInsets.only(bottom: Dimensions.getProportionateScreenHeight(10)),
                         child: InkWell(
                           onTap: () => {
                             Get.to(() => const OrderDetailView(),
@@ -175,7 +227,7 @@ class OrderList extends GetView<DashboardController> {
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize:
-                                                    Dimensions.getProportionateScreenHeight(20),
+                                                        Dimensions.getProportionateScreenHeight(20),
                                                     fontWeight: FontWeight.w700,
                                                   ),
                                                 ),
@@ -189,7 +241,7 @@ class OrderList extends GetView<DashboardController> {
                                             style: TextStyle(
                                                 color: AppColors.mainColor,
                                                 fontSize:
-                                                Dimensions.getProportionateScreenHeight(18),
+                                                    Dimensions.getProportionateScreenHeight(18),
                                                 fontWeight: FontWeight.w700),
                                           ),
                                         ],
@@ -281,9 +333,9 @@ class OrderList extends GetView<DashboardController> {
                                     ),
                                     Text(
                                       NumberFormat("#,##0", "en_US").format(controller
-                                          .orderRes.value.rows!
-                                          .elementAt(index)
-                                          .subTotal) +
+                                              .orderRes.value.rows!
+                                              .elementAt(index)
+                                              .subTotal) +
                                           "đ",
                                       style: TextStyle(
                                           color: const Color(0xFF8B8B8B),

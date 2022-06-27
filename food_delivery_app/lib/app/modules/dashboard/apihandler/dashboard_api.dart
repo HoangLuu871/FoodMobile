@@ -8,20 +8,20 @@ class DashboardApi {
 
   static Future<dynamic> getOrder() async {
     final prefs = await SharedPreferences.getInstance();
-    final accessToken = prefs.getString("accessToken");
+    final accessToken = prefs.getString("accessToken_ship");
     var response = await client.get(
-        Uri.parse("$baseURL/owner/order?status=Cofirmed"),
+        Uri.parse("$baseURL/shipper/order"),
         headers: <String, String> {
           'Content-Type': 'application/json; charset=UTF-8',
           'Authorization': 'Bearer $accessToken'
         }
     );
+    //print(response.body);
     if(response.statusCode == 200) {
       var resJson = response.body;
       return jsonDecode(resJson);
     } else {
       return [];
     }
-
   }
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Nunito">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Nunito/Nunito-Light.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Nunito/Nunito-Bold.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/food_restaurant_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/assets/fonts/Nunito/Nunito-Regular.ttf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

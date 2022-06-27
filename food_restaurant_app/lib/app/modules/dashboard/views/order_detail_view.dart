@@ -1,11 +1,14 @@
 import 'package:ecommerce_flutter/app/modules/dashboard/controllers/dashboard_controller.dart';
 import 'package:ecommerce_flutter/app/modules/dashboard/controllers/order_detail_controller.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../utils/colors.dart';
 import '../../../../utils/dimensions.dart';
+import '../../../main.dart';
 
 class OrderDetailView extends StatefulWidget {
   const OrderDetailView({Key? key}) : super(key: key);
@@ -17,6 +20,53 @@ class OrderDetailView extends StatefulWidget {
 class _OrderDetailViewState extends State<OrderDetailView> {
   OrderDetailController controller = Get.put(OrderDetailController());
   DashboardController dashboardController = Get.put(DashboardController());
+
+  @override
+  void initState() {
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+      print('A new Message event was published!');
+      RemoteNotification notification = message.notification!;
+      AndroidNotification androidNotification = message.notification!.android!;
+      if(notification != null && androidNotification != null) {
+        showDialog(context: context, builder: (_) {
+          return AlertDialog(
+            title: Text(notification.title!),
+            content: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(notification.body!)
+                ],
+              ),
+            ),
+          );
+        });
+      }
+    });
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      RemoteNotification notification = message.notification!;
+      AndroidNotification androidNotification = message.notification!.android!;
+      if(notification != null && androidNotification != null) {
+        flutterLocalNotificationsPlugin.show(
+            notification.hashCode,
+            notification.title,
+            notification.body,
+            NotificationDetails(
+                android: AndroidNotificationDetails(
+                  channel.id,
+                  channel.name,
+                  color: Colors.blue,
+                  playSound: true,
+                  icon: '@mipmap/ic_launcher',
+                )
+            )
+        );
+      }
+    });
+
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -171,50 +221,6 @@ class _OrderDetailViewState extends State<OrderDetailView> {
                     ),
                     SizedBox(
                       height: Dimensions.getProportionateScreenHeight(20),
-                    ),
-                    Container(
-                      height: Dimensions.getProportionateScreenHeight(30),
-                      padding: EdgeInsets.only(
-                          left: Dimensions.getProportionateScreenWidth(170),
-                          right: Dimensions.getProportionateScreenWidth(20)),
-                      child: ElevatedButton(
-                        style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all((controller.checkPending())
-                                ? AppColors.mainColor
-                                : const Color(0xFFC9C9C9)),
-                            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.getProportionateScreenHeight(5)),
-                            ))),
-                        onPressed: (!controller.checkPending())
-                            ? null
-                            : () async {
-                                setState(() {
-                                  controller.isDataProcessing(true);
-                                });
-                                bool success =
-                                    await controller.confirmOrder(controller.orderRes.value.id!);
-                                if (success) {
-                                  dashboardController.refreshData();
-                                  Get.offNamed("/dashboard");
-                                }
-                              },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              (controller.checkPending()) ? "Xác nhận đơn" : "Đơn đã xác nhận",
-                              style: TextStyle(
-                                  fontFamily: 'Roboto',
-                                  fontSize: Dimensions.getProportionateScreenHeight(16),
-                                  fontWeight: FontWeight.w400,
-                                  color: (controller.checkPending())
-                                      ? Colors.white
-                                      : const Color(0xFF454545)),
-                            )
-                          ],
-                        ),
-                      ),
                     ),
                     Expanded(
                       child: ListView.builder(

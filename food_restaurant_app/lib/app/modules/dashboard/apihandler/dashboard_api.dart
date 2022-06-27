@@ -16,10 +16,13 @@ class DashboardApi {
           'Authorization': 'Bearer $accessToken'
         }
     );
+
     if(response.statusCode == 200) {
+      print("Get all order oke");
       var resJson = response.body;
       return jsonDecode(resJson);
     } else {
+      print('Get all order error');
       return [];
     }
   }
@@ -35,9 +38,11 @@ class DashboardApi {
         }
     );
     if(response.statusCode == 200) {
+      print('Get order by $status oke');
       var resJson = response.body;
       return jsonDecode(resJson);
     } else {
+      print('Get order by $status error');
       return [];
     }
   }
@@ -53,9 +58,11 @@ class DashboardApi {
         }
     );
     if(response.statusCode == 200) {
+      print('Get order by $status and $status2 oke');
       var resJson = response.body;
       return jsonDecode(resJson);
     } else {
+      print('Get order by $status and $status2 error');
       return [];
     }
   }
@@ -70,10 +77,13 @@ class DashboardApi {
           'Authorization': 'Bearer $accessToken'
         }
     );
+    print(response.body);
     if(response.statusCode == 200) {
+      print('Get order detail by id $id oke');
       var resJson = response.body;
       return jsonDecode(resJson);
     } else {
+      print('Get order detail by id $id error');
       return [];
     }
   }
